@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jt Machovsky — Engineer</title>
+  <meta name="description" content="Jt Machovsky — Engineer specializing in data, automation, and internal tooling.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0f1114;
+      --surface: #181b20;
+      --surface-hover: #1e2228;
+      --border: #2a2d33;
+      --text: #d4d4d8;
+      --text-dim: #71717a;
+      --text-bright: #ffffff;
+      --accent: #6d9eeb;
+      --accent-hover: #8bb4f0;
+      --accent-dim: rgba(109, 158, 235, 0.08);
+      --mono: 'JetBrains Mono', monospace;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #fafafa;
+        --surface: #ffffff;
+        --surface-hover: #f4f4f5;
+        --border: #e4e4e7;
+        --text: #3f3f46;
+        --text-dim: #71717a;
+        --text-bright: #18181b;
+        --accent: #2563eb;
+        --accent-hover: #1d4ed8;
+        --accent-dim: rgba(37, 99, 235, 0.06);
+      }
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 600px;
+      width: 100%;
+    }
+
+    /* ---- Header ---- */
+    .header {
+      margin-bottom: 2.5rem;
+    }
+
+    .name {
+      font-family: var(--mono);
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      letter-spacing: -0.03em;
+      margin-bottom: 0.25rem;
+    }
+
+    .role {
+      font-size: 1rem;
+      color: var(--text-dim);
+      font-weight: 400;
+    }
+
+    /* ---- About ---- */
+    .about {
+      margin-bottom: 2.5rem;
+    }
+
+    .about p {
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+      max-width: 55ch;
+    }
+
+    .about p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .about a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---- Tech ---- */
+    .tech {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+    }
+
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tech-list span {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid var(--border);
+      padding: 0.3rem 0.7rem;
+      border-radius: 4px;
+    }
+
+    /* ---- Links ---- */
+    .links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.6rem 1.15rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--surface);
+      transition: border-color 0.2s, background 0.2s, color 0.2s;
+    }
+
+    .links a:hover, .links a:focus-visible {
+      border-color: var(--accent);
+      background: var(--surface-hover);
+      color: var(--accent);
+      outline: none;
+    }
+
+    .links a svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    /* ---- Dividers ---- */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 2rem 0;
+    }
+
+    /* ---- Footer ---- */
+    .footer {
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 480px) {
+      body { padding: 1.5rem; }
+      .name { font-size: 1.75rem; }
+      .links { flex-direction: column; }
+      .links a { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="header">
+      <h1 class="name">Jt Machovsky</h1>
+      <p class="role">Engineer · Data &amp; Automation</p>
+    </div>
+
+    <div class="about">
+      <p>
+        I build internal tools, automate business processes, and develop data
+        solutions that help teams work more efficiently. Outside of work, I'm
+        usually tinkering with home automation or reading.
+      </p>
+    </div>
+
+    <div class="tech">
+      <p class="section-label">Technologies</p>
+      <div class="tech-list">
+        <span>C#</span>
+        <span>SQL Server</span>
+        <span>Teradata</span>
+        <span>VBA</span>
+        <span>Python</span>
+        <span>PowerShell</span>
+        <span>Git</span>
+        <span>MS Access</span>
+        <span>Azure DevOps</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="links">
+      <a href="https://github.com/jtmach" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.341-3.369-1.341-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.337-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/jtmach" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://www.goodreads.com/user/show/3204805-jt" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.43 23.995c-3.608-.208-6.274-2.077-7.56-5.104-.736-1.728-.998-3.587-.918-5.507.115-2.776.896-5.192 2.87-7.136 1.57-1.546 3.46-2.282 5.653-2.232 1.932.044 3.56.746 4.878 2.166.052.056.108.108.2.2V1.005h2.5v16.5c0 .96-.04 1.922-.2 2.872-.39 2.32-1.55 4.064-3.7 5.064-1.266.59-2.616.8-4.006.738-.326-.015-.652-.04-.978-.066l.002-.004-.74-.114zm6.63-12.5c-.035-1.17-.134-2.318-.506-3.422-.63-1.87-1.907-2.96-3.874-3.058-1.86-.093-3.394.54-4.478 2.087-1.155 1.65-1.495 3.528-1.4 5.504.065 1.378.345 2.7 1.08 3.894.96 1.562 2.394 2.29 4.2 2.216 1.665-.068 2.935-.81 3.77-2.268.828-1.444 1.12-3.038 1.206-4.653l.002-.3z"/></svg>
+        Goodreads
+      </a>
+      <a href="mailto:jt@mach.dev">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        Email
+      </a>
+    </div>
+
+    <p class="footer">Minnesota, USA</p>
+  </main>
+</body>
+</html>
